@@ -1,1 +1,5 @@
-const
+//Selectors
+
+//Event Listeners
+
+//Functions
