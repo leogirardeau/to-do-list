@@ -86,7 +86,7 @@ function filterTodo(e) {
     });
 }
 
-function savceLocalTodos(todo) {
+function saveLocalTodos(todo) {
     //Check--- Hey do I already have thing in there ?
     let todos;
     if (localStorage.getItem('todos') === null) {
@@ -139,6 +139,6 @@ function removeLocalTodos(todo) {
         todos = JSON.parse(localStorage.getItem('todos'));
     }
     const todoIndex = todo.children[0].innerText;
-    todos.splice(todo.indexOf(todoIndex), 1);
-    localStorageStrogage.setITem('todos', JSON.stringify(todos));
+    todos.splice(todos.indexOf(todoIndex), 1);
+    localStorage.setItem('todos', JSON.stringify(todos));
 }
